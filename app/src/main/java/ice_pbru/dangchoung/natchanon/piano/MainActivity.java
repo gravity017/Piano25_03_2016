@@ -1,7 +1,9 @@
 package ice_pbru.dangchoung.natchanon.piano;
 
+import android.media.MediaPlayer;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.view.View;
 import android.widget.Button;
 
 public class MainActivity extends AppCompatActivity {
@@ -27,8 +29,117 @@ public class MainActivity extends AppCompatActivity {
         //3.Bind Windget
         bindwidget();
 
+        //4. Button Controller
+        buttoncontroller();
+
 
     }//Main Method
+
+    private void buttoncontroller() {
+
+        DoButton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                MediaPlayer DoMediaPlayer = MediaPlayer.create(getBaseContext(),R.raw.song1);
+                DoMediaPlayer.start();
+
+                DoMediaPlayer.setOnCompletionListener(new MediaPlayer.OnCompletionListener() {
+                    @Override
+                    public void onCompletion(MediaPlayer mp) {
+                        mp.release();
+                    }
+                });
+
+            }
+        });
+
+        ReButton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                MediaPlayer ReMediaPlayer = MediaPlayer.create(getBaseContext(),R.raw.song2);
+                ReMediaPlayer.start();
+                ReMediaPlayer.setOnCompletionListener(new MediaPlayer.OnCompletionListener() {
+                    @Override
+                    public void onCompletion(MediaPlayer mp) {
+                        mp.release();
+                    }
+                });
+            }
+        });
+
+        MeButton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                MediaPlayer MePlayer = MediaPlayer.create(getBaseContext(),R.raw.song3);
+                MePlayer.start();
+                MePlayer.setOnCompletionListener(new MediaPlayer.OnCompletionListener() {
+                    @Override
+                    public void onCompletion(MediaPlayer mp) {
+                        mp.release();
+                    }
+                });
+
+
+            }
+        });
+
+        FaButton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                MediaPlayer FaMediaPlayer = MediaPlayer.create(getBaseContext(),R.raw.song4);
+                FaMediaPlayer.start();
+                FaMediaPlayer.setOnCompletionListener(new MediaPlayer.OnCompletionListener() {
+                    @Override
+                    public void onCompletion(MediaPlayer mp) {
+                        mp.release();
+                    }
+                });
+            }
+        });
+
+        SoButton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                MediaPlayer SoMediaPlayer = MediaPlayer.create(getBaseContext(),R.raw.song5);
+                SoMediaPlayer.start();
+                SoMediaPlayer.setOnCompletionListener(new MediaPlayer.OnCompletionListener() {
+                    @Override
+                    public void onCompletion(MediaPlayer mp) {
+                        mp.release();
+                    }
+                });
+            }
+        });
+
+        LaButton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                MediaPlayer LaMediaPlayer = MediaPlayer.create(getBaseContext(),R.raw.song6);
+                LaMediaPlayer.start();
+                LaMediaPlayer.setOnCompletionListener(new MediaPlayer.OnCompletionListener() {
+                    @Override
+                    public void onCompletion(MediaPlayer mp) {
+                        mp.release();
+                    }
+                });
+            }
+        });
+
+        TeButton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                MediaPlayer TeMediaPlayer = MediaPlayer.create(getBaseContext(),R.raw.song7);
+                TeMediaPlayer.start();
+                TeMediaPlayer.setOnCompletionListener(new MediaPlayer.OnCompletionListener() {
+                    @Override
+                    public void onCompletion(MediaPlayer mp) {
+                        mp.release();
+                    }
+                });
+            }
+        });
+
+    }// Button Controller
 
     private void bindwidget() {
 
@@ -45,6 +156,8 @@ public class MainActivity extends AppCompatActivity {
 
 }//Main Class
 
+// ขั้นตอนการทำ
 //1. หาขอบเขต
 //2. Explicit
 //3. Bind Widget
+//4. Button Controller
