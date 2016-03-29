@@ -39,6 +39,7 @@ public class MainActivity extends AppCompatActivity {
         SoButton = (Button) findViewById(R.id.button5);
         LaButton = (Button) findViewById(R.id.button6);
         TeButton = (Button) findViewById(R.id.button7);
+        DooButton = (Button) findViewById(R.id.button8);
 
     }// bind widget
 
